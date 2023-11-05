@@ -46,9 +46,9 @@ export default function SignUp() {
 
   return (
     <section className="px-5 lg:px-0">
-      <div className='w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10 p-20'>
+      <div className='w-full max-w-[570px] mx-auto rounded-lg shadow-md hover:shadow-xl md:p-10 p-20'>
         <h3 className='text-[22px] leading-9 font-bold mb-10'>
-          Hello! <span className="text-yellow-400">Welcome</span> Back🎉
+          Get Onboard with <span className="text-yellow-400">Wash Wheels 🛞</span>
         </h3>
       <form onSubmit={handleSubmit} className='py-4 md:py-0'>
         <div className="mb:5">
@@ -81,15 +81,17 @@ export default function SignUp() {
         <div className="mt-7">
           <button
             disabled={loading}
-            className='w-full h-[34px] px-3 py-2.5 bg-yellow-400 rounded-[34px] items-center gap-2.5 hover:bg-white border-2 leading-[30px] border-yellow-400 transition-all duration-300 ease-in-out flex justify-center'
+            className='w-full h-12 px-4 py-2 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-white border-2 border-yellow-400 transition-all duration-300 ease-in-out'
           >
-            {loading ? 'Loading...' : 'Sign Up'}
+            <span className='text-lg font-semibold'>{loading ? 'Loading...' : 'Sign Up'}</span>
           </button>
+        </div>
+        <div className='mt-7'>
+          <OAuth/>
         </div>
         <p className='mt-5 text-black text-center'>
           Already have an account?  <Link to="/sign-in" className='text-yellow-500'>Log-In</Link>
         </p>
-        <OAuth/>
       </form>
       {error && <p className='text-red-500 mt-5'>{error}</p>}
       </div>

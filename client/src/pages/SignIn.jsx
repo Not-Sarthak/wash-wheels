@@ -43,37 +43,38 @@ export default function SignIn() {
     }
   };
   return (
-    <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
+    <div className='p-3 max-w-lg w-full mx-auto rounded-lg shadow-md hover:shadow-xl md:p-10'>
+      <h3 className='text-[22px] leading-9 font-bold mb-10'>
+        Hello! <span className="text-yellow-400">Welcome</span> Back🎉
+      </h3>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           type='email'
-          placeholder='email'
-          className='border p-3 rounded-lg'
+          placeholder='Enter E-mail'
+          className='font-serif w-full py-3 border-b border-solid border-yellow-300 focus:outline-none focus:border-b-yellow-300 text-[16px] leading-7 text-black placeholder:text-gray-600 cursor-pointer'
           id='email'
           onChange={handleChange}
         />
         <input
           type='password'
-          placeholder='password'
-          className='border p-3 rounded-lg'
+          placeholder='Password'
+          className='font-serif w-full py-3 border-b border-solid border-yellow-300 focus:outline-none focus:border-b-yellow-300 text-[16px] leading-7 text-black placeholder:text-gray-600 cursor-pointer'
           id='password'
           onChange={handleChange}
         />
 
         <button
           disabled={loading}
-          className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+          className='w-full h-12 px-4 py-2 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-white border-2 border-yellow-400 transition-all duration-300 ease-in-out'
         >
-          {loading ? 'Loading...' : 'Sign In'}
+          <span className='text-lg font-semibold'>{loading ? 'Loading...' : 'Sign In'}</span>
         </button>
         <OAuth/>
       </form>
-      <div className='flex gap-2 mt-5'>
-        <p>Dont have an account?</p>
-        <Link to={'/sign-up'}>
-          <span className='text-blue-700'>Sign up</span>
-        </Link>
+      <div className='gap-2 mt-5 flex justify-center'>
+        <p className='mt-5 text-black text-center'>
+          Dont have an account?  <Link to="/sign-up" className='text-yellow-500'>Sign up</Link>
+        </p>
       </div>
       {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
