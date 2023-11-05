@@ -2,8 +2,11 @@ import React from 'react'
 import '../../index.css'
 import Button from '../buttons/Button'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+
+  const { currentUser } = useSelector(state => state.user)  
 
   return (
     <>
@@ -54,7 +57,13 @@ const Header = () => {
                 href="#"
                 className="hidden mr-8 p-3 px-6 pt-2 text-gray-900 bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
                 >
-                    <Link to="/sign-in"><Button text="Login" /></Link>
+                    <Link to="/profile">
+                        {currentUser ? (
+                            <img src={currentUser.avatar} alt="" className='w-10 h-10 object-cover rounded-full'/>
+                        ) :(
+                            <Button text="Log In" />
+                        )}
+                    </Link>
                 </a>
             </div>
         </nav>

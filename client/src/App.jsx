@@ -7,6 +7,7 @@ import About from './pages/About'
 import Profile from './pages/Profile'
 import Contact from './pages/Contact'
 import Header from './components/header/Header'
+import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route element={<PrivateRoute />} />
         </Routes>
     </BrowserRouter>
   )
