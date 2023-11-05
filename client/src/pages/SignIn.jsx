@@ -47,6 +47,7 @@ export default function SignIn() {
       <h3 className='text-[22px] leading-9 font-bold mb-10'>
         Hello! <span className="text-yellow-400">Welcome</span> Back🎉
       </h3>
+      {error && <p className='text-red-500 mt-5'>{error}</p>}
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           type='email'
@@ -76,7 +77,6 @@ export default function SignIn() {
           Dont have an account?  <Link to="/sign-up" className='text-yellow-500'>Sign up</Link>
         </p>
       </div>
-      {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
   );
 }

@@ -50,6 +50,7 @@ export default function SignUp() {
         <h3 className='text-[22px] leading-9 font-bold mb-10'>
           Get Onboard with <span className="text-yellow-400">Wash Wheels 🛞</span>
         </h3>
+        {error && <p className='text-red-500 mt-5'>{error}</p>}
       <form onSubmit={handleSubmit} className='py-4 md:py-0'>
         <div className="mb:5">
           <input
@@ -93,7 +94,6 @@ export default function SignUp() {
           Already have an account?  <Link to="/sign-in" className='text-yellow-500'>Log-In</Link>
         </p>
       </form>
-      {error && <p className='text-red-500 mt-5'>{error}</p>}
       </div>
     </section>
   );

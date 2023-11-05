@@ -57,13 +57,17 @@ const Header = () => {
                 href="#"
                 className="hidden mr-8 p-3 px-6 pt-2 text-gray-900 bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
                 >
-                    <Link to="/profile">
+                    
                         {currentUser ? (
-                            <img src={currentUser.avatar} alt="" className='w-10 h-10 object-cover rounded-full'/>
+                            <Link to="/profile">
+                                <img src={currentUser.avatar} alt="" className='w-10 h-10 object-cover rounded-full'/>
+                            </Link>
                         ) :(
-                            <Button text="Log In" />
+                            <Link to="/sign-in">
+                                <Button text="Log In" />
+                            </Link>
                         )}
-                    </Link>
+                    
                 </a>
             </div>
         </nav>
