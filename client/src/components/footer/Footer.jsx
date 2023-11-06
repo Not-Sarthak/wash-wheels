@@ -26,13 +26,13 @@ const Footer = () => {
             <div className="text-black text-sm">Home</div>
           </div>
           <div className="justify-center items-center gap-2.5 flex">
-            <div className="text-black text-sm font-normal">Education</div>
+            <div className="text-black text-sm font-normal">Services</div>
           </div>
           <div className="justify-center items-center gap-2.5 flex">
-            <div className="text-black text-sm font-normal">Clothing</div>
+            <div className="text-black text-sm font-normal">Talk to us</div>
           </div>
           <div className="justify-center items-center gap-2.5 flex">
-            <div className="text-black text-sm font-normal">House goods</div>
+            <div className="text-black text-sm font-normal">About us</div>
           </div>
         </div>
       </div>

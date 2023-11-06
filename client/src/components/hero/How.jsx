@@ -2,7 +2,7 @@ import React from 'react'
 
 const How = () => {
   return (
-    <div className='bg-sky-100 pl-32 pr-32'>
+    <div className='bg-sky-100 '>
     <div className="flex justify-center">
         <div className="w-[873px]">
             <div className="text-center">

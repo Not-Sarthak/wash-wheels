@@ -40,10 +40,11 @@ const Why = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 flex flex-col font-serif text-3xl items-center md:items-end space-y-4 relative mr-32" style={{ lineHeight: "2rem" }}>
-        Why Wash Wheels?
-        <img src="../src/assets/home/why.svg"/>
+      <div className="md:w-1/2 flex flex-col items-center justify-center font-serif text-3xl space-y-4 relative " style={{ lineHeight: "2rem" }}>
+        Why Wash Wheels
+        <img src="../src/assets/home/why.jpg" className="w-96" />
       </div>
+
     </div>
   </section>
 </div>

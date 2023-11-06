@@ -191,7 +191,7 @@ export default function Profile() {
           placeholder='username'
           defaultValue={currentUser.username}
           id='username'
-          className='border p-3 rounded-lg'
+          className='font-serif w-full py-3 border-b border-solid border-gray-400 focus:outline-none focus:border-b-yellow-300 text-[16px] leading-7 text-black placeholder:text-gray-600 cursor-pointer'
           onChange={handleChange}
         />
         <input
@@ -199,7 +199,7 @@ export default function Profile() {
           placeholder='email'
           id='email'
           defaultValue={currentUser.email}
-          className='border p-3 rounded-lg'
+          className='font-serif w-full py-3 border-b border-solid border-gray-400 focus:outline-none focus:border-b-yellow-300 text-[16px] leading-7 text-black placeholder:text-gray-600 cursor-pointer'
           onChange={handleChange}
         />
         <input
@@ -207,29 +207,32 @@ export default function Profile() {
           placeholder='password'
           onChange={handleChange}
           id='password'
-          className='border p-3 rounded-lg'
+          className='font-serif w-full py-3 border-b border-solid border-gray-400 focus:outline-none focus:border-b-yellow-300 text-[16px] leading-7 text-black placeholder:text-gray-600 cursor-pointer'
         />
-        <button
-          disabled={loading}
-          className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'
-        >
-          {loading ? 'Loading...' : 'Update'}
-        </button>
-        <Link
-          className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95'
-          to={'/create-listing'}
-        >
-          Create Listing
-        </Link>
+        <div className="flex">
+          <button
+            disabled={loading}
+            className='w-1/2 h-12 m-2 px-4 py-2 bg-black hover:text-black rounded-full flex items-center justify-center hover:bg-white border-2 border-black transition-all duration-300 ease-in-out text-white'
+          >
+            {loading ? 'Loading...' : 'Update'}
+          </button>
+          <Link
+            className='w-1/2 h-12 m-2 px-4 py-2  rounded-full flex items-center justify-center border-2 border-yellow-600 transition-all duration-300 ease-in-out hover:bg-yellow-600'
+            to={'/create-listing'}
+          >
+            Create Listing
+          </Link>
+        </div>
       </form>
-      <div className='flex justify-between mt-5'>
+      <div className='flex justify-center mt-5 mr-12'>
         <span
           onClick={handleDeleteUser}
-          className='text-red-700 cursor-pointer'
+          className='text-red-700 cursor-pointer hover:underline'
         >
-          Delete account
+            Delete account
         </span>
-        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
+        <span className='mr-2 ml-2 text-gray-400'>|</span>
+        <span onClick={handleSignOut} className='text-red-700 hover:underline cursor-pointer'>
           Sign out
         </span>
       </div>
@@ -238,9 +241,6 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <button onClick={handleShowListings} className='text-green-700 w-full'>
-        Show Listings
-      </button>
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>

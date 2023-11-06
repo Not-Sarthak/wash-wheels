@@ -5,11 +5,11 @@ import Why from '../components/hero/Why'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <How />
       <Why />
-    </div>
+    </>
   )
 }
 
