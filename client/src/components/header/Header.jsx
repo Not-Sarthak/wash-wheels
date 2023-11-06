@@ -31,7 +31,7 @@ const Header = () => {
                     href="#"
                     style={{ fontFamily: "Nunito Sans, sans-serif" }}
                     >
-                        <Link to="/">Services</Link>
+                        <Link to="/services">Services</Link>
                         <span className="gradient-underline"></span>
                     </a>
                     <a
