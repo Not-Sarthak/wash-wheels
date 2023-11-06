@@ -17,7 +17,7 @@ const Why = () => {
           <div className="div1 transform translate-x-0 transition-transform duration-500 ease-in-out hover:translate-x-2">
             <Feature
               title={"Eco-friendly 🐝"}
-              description={"Sharing items reduces your carbon footprint."}
+              description={"Cleanliness reduces your carbon footprint."}
             />
           </div>
           <div className="div2 transform translate-x-0 transition-transform duration-500 ease-in-out hover:translate-x-2">
@@ -41,7 +41,7 @@ const Why = () => {
         </div>
       </div>
       <div className="md:w-1/2 flex flex-col font-serif text-3xl items-center md:items-end space-y-4 relative mr-32" style={{ lineHeight: "2rem" }}>
-        Why Wall Street?
+        Why Wash Wheels?
         <img src="../src/assets/home/why.svg"/>
       </div>
     </div>

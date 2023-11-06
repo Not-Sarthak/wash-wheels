@@ -6,11 +6,11 @@ const How = () => {
     <div className="flex justify-center">
         <div className="w-[873px]">
             <div className="text-center">
-            <span className="text-black text-[22px] font-normal font-['Nunito Sans']">Wall Street is your community exchange hub, where sharing is caring and sustainability meets fun. It's all about </span>
-            <span className="text-black text-lg font-semibold font-['Noto Serif']">giving</span>
+            <span className="text-black text-[22px] font-normal font-['Nunito Sans']">Wash Wheels is your convenient door-to-door car washing service, dedicated to making your vehicle shine while keeping environmental sustainability in mind. We bring the car wash experience right to your doorstep, ensuring a </span>
+            <span className="text-black text-lg font-semibold font-['Noto Serif']">spotless</span>
             <span className="text-black text-[22px] font-normal font-['Nunito Sans']"> and </span>
-            <span className="text-black text-lg font-semibold font-['Noto Serif']">receiving</span>
-            <span className="text-black text-[22px] font-normal font-['Nunito Sans']"> items that make life a little brighter.</span>
+            <span className="text-black text-lg font-semibold font-['Noto Serif']">hassle-free</span>
+            <span className="text-black text-[22px] font-normal font-['Nunito Sans']"> ride, all with a touch of convenience. </span>
             </div>
         </div>
     </div>
